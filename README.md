@@ -13,9 +13,7 @@ This project demonstrates **state management, component architecture, and dynami
 ---
 
 ## 📂 GitHub Repository
-
-👉 Add your repository link here
-
+(https://github.com/jinlucius/Food-order.git)
 ---
 
 ## 🧠 Project Overview
