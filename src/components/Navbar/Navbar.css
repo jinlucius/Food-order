@@ -1,0 +1,155 @@
+/* 🧭 Navbar Container */
+.navbar {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* ✨ Premium Glass Effect */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.05),
+    0 3px 10px rgba(0, 0, 0, 0.03);
+
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+}
+
+/* 🖼️ Logo */
+.navbar .logo {
+  width: 140px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+}
+
+/* 📑 Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  color: #5a647f;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ✨ Menu Hover */
+.navbar-menu li {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.navbar-menu li:hover {
+  color: #ff7a59;
+}
+
+/* 🔥 Active Link Underline */
+.navbar .active {
+  color: #ff7a59;
+}
+
+.navbar .active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(135deg, #ff7a59, #ff5a3d);
+  border-radius: 2px;
+}
+
+/* 👉 Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 🔍 Icons */
+.navbar-right img {
+  width: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-right img:hover {
+  transform: scale(1.15);
+}
+
+/* 🔘 Button (Premium CTA) */
+.navbar button {
+  background: linear-gradient(135deg, #ff7a59, #ff5a3d);
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 24px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Button Hover */
+.navbar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 90, 61, 0.25);
+}
+
+/* 🔴 Cart Dot */
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background: linear-gradient(135deg, #ff7a59, #ff5a3d);
+  border-radius: 50%;
+  top: -6px;
+  right: -6px;
+  box-shadow: 0 0 8px rgba(255, 90, 61, 0.6);
+}
+
+/* 📱 Responsive */
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 130px;
+  }
+
+  .navbar-menu {
+    gap: 20px;
+    font-size: 15px;
+  }
+
+  .navbar-right {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none; /* mobile clean */
+  }
+}
