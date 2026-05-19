@@ -4,8 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Cart from './Pages/Cart/Cart';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
-import LoginPopUp from './components/LoginPopup/LoginPopup';
-import Footer from './components/Footer/Footer'; // 👉 (missing tha, add kiya)
+import LoginPopup from "./components/LoginPopup/LoginPopup";import Footer from './components/Footer/Footer'; // 👉 (missing tha, add kiya)
 
 // 👉 Main App component (root component)
 const App = () => {
@@ -19,7 +18,7 @@ const App = () => {
       {/* 👉 Agar showLogin true hai toh popup dikhao */}
       {/* 👉 nahi toh kuch bhi render nahi hoga */}
       {showLogin ? (
-        <LoginPopUp setShowLogin={setShowLogin} />
+        <LoginPopup setShowLogin={setShowLogin} />
       ) : (
         <></>
       )}
