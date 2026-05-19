@@ -1,0 +1,182 @@
+/* 🛒 Cart Container */
+.cart {
+  margin-top: 100px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🧾 Cart Header Row */
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 0.8fr 1.8fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  color: #9aa0a6;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+/* 📦 Each Item Row */
+.cart-items-item {
+  margin: 12px 0;
+  color: #2a2a2a;
+  display: grid;
+  grid-template-columns: 0.8fr 1.8fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+/* ✨ Hover = soft highlight */
+.cart-items-item:hover {
+  background: #f9fafc;
+}
+
+/* 🖼️ Product Image */
+.cart-items-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ➖ Divider */
+.cart hr {
+  height: 1px;
+  background-color: #eef1f5;
+  border: none;
+}
+
+/* ❌ Remove Button */
+.cart-items-item .cross {
+  cursor: pointer;
+  font-size: 18px;
+  color: #bbb;
+  transition: all 0.2s ease;
+}
+
+.cart-items-item .cross:hover {
+  color: #ff5a3d;
+  transform: scale(1.2);
+}
+
+/* 🔻 Bottom Section */
+.cart-bottom {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* 💰 Cart Total Box */
+.cart-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    0 5px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* 📊 Total Details */
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ➖ Divider */
+.cart-total hr {
+  margin: 10px 0;
+  background: #eef1f5;
+}
+
+/* 🔘 Checkout Button */
+.cart-total button {
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #ff7a59, #ff5a3d);
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Button Hover */
+.cart-total button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 90, 61, 0.25);
+}
+
+/* 🎟️ Promo Code Section */
+.cart-promocode {
+  flex: 1;
+}
+
+/* 📝 Promo Text */
+.cart-promocode p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* 📦 Promo Input Box */
+.cart-promocode-input {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f6f9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ⌨️ Input */
+.cart-promocode-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* 🎯 Apply Button */
+.cart-promocode-input button {
+  width: 140px;
+  padding: 12px;
+  background: #2a2a2a;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Hover */
+.cart-promocode-input button:hover {
+  background: #000;
+}
+
+/* 📱 Responsive */
+@media (max-width: 750px) {
+  .cart-bottom {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .cart-items-title {
+    display: none; /* mobile clean UI */
+  }
+
+  .cart-items-item {
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,109 @@
+/* 🍱 Section */
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 40px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🏷️ Heading */
+.explore-menu h1 {
+  color: #2a2a2a;
+  font-weight: 600;
+  font-size: clamp(22px, 2.5vw, 32px);
+}
+
+/* 📝 Description */
+.explore-menu-text {
+  max-width: 600px;
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* 📦 Scroll Menu */
+.explore-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 10px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* ❌ Hide scrollbar */
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🍔 Each Item */
+.explore-menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🖼️ Category Image */
+.explore-menu-list-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+
+  border-radius: 50%;
+  padding: 6px;
+
+  background: #ffffff;
+  box-shadow: 
+    0 6px 15px rgba(0,0,0,0.06),
+    0 2px 6px rgba(0,0,0,0.03);
+
+  transition: all 0.3s ease;
+}
+
+/* ✨ Hover Effect */
+.explore-menu-list-item:hover img {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 12px 25px rgba(0,0,0,0.08),
+    0 5px 10px rgba(0,0,0,0.05);
+}
+
+/* 🏷️ Text */
+.explore-menu-list-item p {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+/* ✨ Hover Text */
+.explore-menu-list-item:hover p {
+  color: #ff7a59;
+}
+
+/* 🔥 Active Category */
+.explore-menu-list-item.active img {
+  border: 3px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(135deg, #ff7a59, #ff5a3d) border-box;
+
+  box-shadow: 0 8px 20px rgba(255, 90, 61, 0.25);
+}
+
+.explore-menu-list-item.active p {
+  color: #ff5a3d;
+  font-weight: 600;
+}
+
+/* ➖ Divider */
+.explore-menu hr {
+  margin: 15px 0;
+  height: 1px;
+  border: none;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+}

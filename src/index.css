@@ -1,0 +1,49 @@
+/* 🌿 Import Premium Font (already good choice) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* 🌍 Global Reset + Smooth Feel */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 🎨 Body Styling (Soft Luxury Background) */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafc, #f1f4f9); /* soft gradient */
+  color: #2a2a2a; /* premium dark grey instead of black */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 🔗 Links (Clean + Smooth Hover) */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7; /* subtle interaction */
+}
+
+/* 📦 Main App Container */
+.app {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* ✨ Smooth Fade Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* thoda motion for premium feel */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
